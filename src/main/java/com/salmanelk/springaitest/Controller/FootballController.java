@@ -23,24 +23,23 @@ public class FootballController {
     @GetMapping("/{year}")
     public Footballer getFootballer (@PathVariable int year) {
 
-        BeanOutputParser<Footballer> parser = new BeanOutputParser<>(Footballer.class);
-
         String promptString = """
         Give the ballon d'or winner of {year} and return the response like this {format} 
         """;
 
-//        OpenAiApi.ChatCompletionRequest completionRequest = new OpenAiApi.ChatCompletionRequest();
+//          creating a parser to map the output call to our predefined structure
+        BeanOutputParser<Footballer> parser = new BeanOutputParser<>(Footballer.class);
 
+//          creating a prompt template and defining its properties values
         PromptTemplate promptTemplate = new PromptTemplate(promptString);
         promptTemplate.add("year", year);
         promptTemplate.add("format", parser.getFormat());
 
         Prompt prompt = promptTemplate.create();
-        
+
+//          calling and mapping
         String response = chatClient.call(prompt).getResult().getOutput().getContent();
-
         Footballer responseFootballer = parser.parse(response);
-
         return responseFootballer;
     }
 
