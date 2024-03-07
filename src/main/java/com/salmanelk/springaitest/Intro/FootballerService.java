@@ -1,28 +1,20 @@
-package com.salmanelk.springaitest.Controller;
+package com.salmanelk.springaitest.Intro;
 
 
-import com.salmanelk.springaitest.Model.Footballer;
+import com.salmanelk.springaitest.Intro.Footballer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.openai.OpenAiChatClient;
 import org.springframework.ai.parser.BeanOutputParser;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
-@RestController
-@RequestMapping("v1/football")
+@Service
 @RequiredArgsConstructor
-public class FootballController {
+public class FootballerService {
 
     private final OpenAiChatClient chatClient;
-
-
-    @GetMapping("/{year}")
-    public Footballer getFootballer (@PathVariable int year) {
-
+    public Footballer getFootballer(int year) {
         String promptString = """
         Give the ballon d'or winner of {year} and return the response like this {format} 
         """;
@@ -42,6 +34,4 @@ public class FootballController {
         Footballer responseFootballer = parser.parse(response);
         return responseFootballer;
     }
-
-
 }
