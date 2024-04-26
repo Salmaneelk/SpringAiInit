@@ -1,13 +1,14 @@
-package com.salmanelk.springaitest.Intro;
+package com.salmanelk.springaitest.A_Prompt_Parser;
 
 
-import com.salmanelk.springaitest.Intro.Footballer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.openai.OpenAiChatClient;
 import org.springframework.ai.parser.BeanOutputParser;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
@@ -23,9 +24,9 @@ public class FootballerService {
         BeanOutputParser<Footballer> parser = new BeanOutputParser<>(Footballer.class);
 
 //          creating a prompt template and defining its properties values
-        PromptTemplate promptTemplate = new PromptTemplate(promptString);
-        promptTemplate.add("year", year);
-        promptTemplate.add("format", parser.getFormat());
+        PromptTemplate promptTemplate = new PromptTemplate(
+                promptString,
+                Map.of("year", year,"format", parser.getFormat()));
 
         Prompt prompt = promptTemplate.create();
 

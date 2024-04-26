@@ -1,4 +1,4 @@
-package com.salmanelk.springaitest.Intro;
+package com.salmanelk.springaitest.A_Prompt_Parser;
 
 
 import lombok.RequiredArgsConstructor;
