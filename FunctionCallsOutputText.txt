@@ -1,0 +1,50 @@
+1. Alabama - Montgomery
+2. Alaska - Juneau
+3. Arizona - Phoenix
+4. Arkansas - Little Rock
+5. California - Sacramento
+6. Colorado - Denver
+7. Connecticut - Hartford
+8. Delaware - Dover
+9. Florida - Tallahassee
+10. Georgia - Atlanta
+11. Hawaii - Honolulu
+12. Idaho - Boise
+13. Illinois - Springfield
+14. Indiana - Indianapolis
+15. Iowa - Des Moines
+16. Kansas - Topeka
+17. Kentucky - Frankfort
+18. Louisiana - Baton Rouge
+19. Maine - Augusta
+20. Maryland - Annapolis
+21. Massachusetts - Boston
+22. Michigan - Lansing
+23. Minnesota - Saint Paul
+24. Mississippi - Jackson
+25. Missouri - Jefferson City
+26. Montana - Helena
+27. Nebraska - Lincoln
+28. Nevada - Carson City
+29. New Hampshire - Concord
+30. New Jersey - Trenton
+31. New Mexico - Santa Fe
+32. New York - Albany
+33. North Carolina - Raleigh
+34. North Dakota - Bismarck
+35. Ohio - Columbus
+36. Oklahoma - Oklahoma City
+37. Oregon - Salem
+38. Pennsylvania - Harrisburg
+39. Rhode Island - Providence
+40. South Carolina - Columbia
+41. South Dakota - Pierre
+42. Tennessee - Nashville
+43. Texas - Austin
+44. Utah - Salt Lake City
+45. Vermont - Montpelier
+46. Virginia - Richmond
+47. Washington - Olympia
+48. West Virginia - Charleston
+49. Wisconsin - Madison
+50. Wyoming - Cheyenne

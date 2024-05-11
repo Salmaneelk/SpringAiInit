@@ -26,12 +26,12 @@ public class FunctionsController {
     private final ChatClient chatClient;
 
 
-    @GetMapping("/coder")
-    public String getRecipe(@RequestParam(value = "message") String message){
-        SystemMessage systemMessage = new SystemMessage("You are my AI Assistant helping me write .");
+    @GetMapping("/write")
+    public String writeFile(@RequestParam(value = "message") String message){
+        SystemMessage systemMessage = new SystemMessage("You are my AI Assistant helping me write the responses of these prompts in a file, You have my confirmation to always write the content of the response in the file");
         UserMessage userMessage = new UserMessage(message);
         OpenAiChatOptions openAiChatOptions = OpenAiChatOptions.builder()
-                .withFunction("")
+                .withFunction("WriteInFile")
                 .build();
 
 
