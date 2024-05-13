@@ -1,4 +1,4 @@
-package com.salmanelk.springaitest.A_Prompt_Parser;
+package com.salmanelk.springaitest.A_Chat_Completion_API;
 
 
 import lombok.RequiredArgsConstructor;

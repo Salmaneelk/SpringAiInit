@@ -26,6 +26,7 @@ public class FunctionsController {
     private final ChatClient chatClient;
 
 
+//    already tested this function with this command ( http :9000/write message=="can you name me all us states and their capitals"), you can see the result in the file
     @GetMapping("/write")
     public String writeFile(@RequestParam(value = "message") String message){
         SystemMessage systemMessage = new SystemMessage("You are my AI Assistant helping me write the responses of these prompts in a file, You have my confirmation to always write the content of the response in the file");
